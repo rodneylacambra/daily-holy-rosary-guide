@@ -1,1 +1,510 @@
+/**
+ * Holy Rosary - Frontend Styles
+ *
+ * @package HolyRosary
+ */
 
+/* ─── Reset & Container ───────────────────────────────── */
+.holy-rosary-app {
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 1rem 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	color: #111827;
+	box-sizing: border-box;
+}
+
+.holy-rosary-app *,
+.holy-rosary-app *::before,
+.holy-rosary-app *::after {
+	box-sizing: inherit;
+}
+
+/* ─── Date Banner ─────────────────────────────────────── */
+.hr-date-banner {
+	background: linear-gradient( 90deg, #1a3fcc, #0e2899 );
+	color: #fff;
+	border-radius: 10px;
+	padding: 8px 14px;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.hr-date-left {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.hr-date-right {
+	font-size: 12px;
+	opacity: 0.85;
+	font-style: italic;
+}
+
+.hr-mystery-pill {
+	background: rgba( 255, 255, 255, 0.2 );
+	border: 1px solid rgba( 255, 255, 255, 0.35 );
+	border-radius: 20px;
+	padding: 2px 10px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* ─── Channel Bar ─────────────────────────────────────── */
+.hr-channel-bar {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.hr-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #8B6914;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	flex-shrink: 0;
+}
+
+.hr-channel-info h2 {
+	font-size: 15px;
+	font-weight: 500;
+	color: #111827;
+	margin: 0 0 2px;
+	padding: 0;
+	border: none;
+}
+
+.hr-channel-info p {
+	font-size: 12px;
+	color: #6b7280;
+	margin: 0;
+}
+
+.hr-live-badge {
+	margin-left: auto;
+	background: #E24B4A;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 500;
+	padding: 3px 10px;
+	border-radius: 4px;
+	white-space: nowrap;
+}
+
+/* ─── Progress Label ──────────────────────────────────── */
+.hr-progress-label {
+	font-size: 12px;
+	color: #6b7280;
+	margin: 0 0 4px;
+	text-align: center;
+}
+
+/* ─── Canvas ──────────────────────────────────────────── */
+.hr-canvas {
+	display: block;
+	margin: 0 auto 1rem;
+	max-width: 100%;
+}
+
+/* ─── Mystery Tabs ────────────────────────────────────── */
+.hr-mystery-tabs {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+.hr-tab {
+	padding: 5px 12px;
+	border-radius: 8px;
+	font-size: 13px;
+	border: 1px solid #e5e7eb;
+	background: #f3f4f6;
+	color: #6b7280;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.15s ease;
+	font-family: inherit;
+	line-height: 1.4;
+}
+
+.hr-tab:hover {
+	background: #e9eaec;
+	border-color: #d1d5db;
+}
+
+.hr-tab.is-active {
+	background: #FEF3C7;
+	border-color: #B45309;
+	color: #92400E;
+	font-weight: 500;
+}
+
+.hr-tab.is-today {
+	box-shadow: 0 0 0 2px #1a3fcc;
+}
+
+.hr-tab-dot {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #E24B4A;
+	border: 1.5px solid #fff;
+}
+
+/* ─── Step Card ───────────────────────────────────────── */
+.hr-step-card {
+	background: #fff;
+	border-radius: 12px;
+	border: 1px solid #e5e7eb;
+	padding: 1.1rem 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.hr-step-number {
+	font-size: 11px;
+	color: #6b7280;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+.hr-step-title {
+	font-size: 15px;
+	font-weight: 500;
+	color: #111827;
+	margin: 0 0 5px;
+	padding: 0;
+	border: none;
+}
+
+.hr-step-desc {
+	font-size: 13px;
+	color: #6b7280;
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* ─── Prayer Block ────────────────────────────────────── */
+.hr-prayer-block {
+	margin-top: 9px;
+}
+
+.hr-prayer-label {
+	font-size: 11px;
+	font-weight: 500;
+	color: #6b7280;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+.hr-prayer-text {
+	font-size: 13px;
+	color: #111827;
+	line-height: 1.85;
+	padding: 9px 13px;
+	background: #f3f4f6;
+	border-radius: 8px;
+	border-left: 3px solid #B45309;
+	font-style: italic;
+	margin-bottom: 6px;
+	white-space: pre-line;
+}
+
+/* ─── Mystery Card ────────────────────────────────────── */
+.hr-mystery-card {
+	background: #f3f4f6;
+	border-radius: 8px;
+	padding: 10px 14px;
+	margin-top: 10px;
+	border-left: 3px solid #1a3fcc;
+}
+
+.hr-mystery-ordinal {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #1a3fcc;
+	margin-bottom: 3px;
+}
+
+.hr-mystery-name {
+	font-size: 14px;
+	font-weight: 700;
+	color: #111827;
+	margin-bottom: 3px;
+}
+
+.hr-mystery-desc {
+	font-size: 12px;
+	color: #6b7280;
+	line-height: 1.5;
+}
+
+/* ─── Decade Dots ─────────────────────────────────────── */
+.hr-decade-dots {
+	display: flex;
+	gap: 5px;
+	margin-top: 9px;
+	flex-wrap: wrap;
+}
+
+.hr-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 1.5px solid #d1d5db;
+	background: #f3f4f6;
+	display: inline-block;
+	transition: all 0.2s;
+}
+
+.hr-dot.is-filled {
+	background: #D4A843;
+	border-color: #B48A20;
+}
+
+.hr-dot.is-active {
+	background: #1A3FCC;
+	border-color: #1230AA;
+	box-shadow: 0 0 0 3px rgba( 26, 63, 204, 0.18 );
+}
+
+/* ─── Tags ────────────────────────────────────────────── */
+.hr-additional-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	background: #f0f4ff;
+	border: 1px solid #c0ccf0;
+	border-radius: 20px;
+	padding: 3px 10px;
+	font-size: 11px;
+	font-weight: 600;
+	color: #1a3fcc;
+	margin-bottom: 8px;
+}
+
+.hr-heart-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	background: #fff0f2;
+	border: 1px solid #f0b0ba;
+	border-radius: 20px;
+	padding: 3px 10px;
+	font-size: 11px;
+	font-weight: 600;
+	color: #c0102a;
+	margin-bottom: 8px;
+}
+
+/* ─── Navigation ──────────────────────────────────────── */
+.hr-nav-row {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+
+.hr-btn {
+	padding: 8px 18px;
+	border-radius: 8px;
+	border: 1px solid #d1d5db;
+	background: transparent;
+	color: #111827;
+	font-size: 14px;
+	cursor: pointer;
+	font-family: inherit;
+	transition: background 0.15s ease;
+	line-height: 1.4;
+}
+
+.hr-btn:hover {
+	background: #f3f4f6;
+}
+
+.hr-btn-primary {
+	background: #8B6914;
+	border-color: #8B6914;
+	color: #fff;
+	font-weight: 500;
+}
+
+.hr-btn-primary:hover {
+	background: #6B5010;
+	border-color: #6B5010;
+	color: #fff;
+}
+
+.hr-step-counter {
+	font-size: 13px;
+	color: #6b7280;
+	margin-left: auto;
+}
+
+/* ─── Audio Bar ───────────────────────────────────────── */
+.hr-audio-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	background: #f8f9ff;
+	border: 1px solid #d0d9f5;
+	border-radius: 10px;
+	padding: 8px 14px;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+.hr-audio-left,
+.hr-audio-right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Play / Pause button */
+.hr-audio-btn {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: 2px solid #1a3fcc;
+	background: #1a3fcc;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.15s ease, transform 0.1s ease;
+	flex-shrink: 0;
+	line-height: 1;
+	padding: 0;
+}
+
+.hr-audio-btn:hover {
+	background: #0e2899;
+	border-color: #0e2899;
+}
+
+.hr-audio-btn:active {
+	transform: scale( 0.93 );
+}
+
+/* Speaking indicator — animated dots */
+.hr-audio-indicator {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	height: 16px;
+}
+
+.hr-audio-dot {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #1a3fcc;
+	opacity: 0.25;
+	transition: opacity 0.2s;
+}
+
+.hr-audio-indicator.is-active .hr-audio-dot:nth-child(1) {
+	animation: hr-audio-bounce 1s ease-in-out 0s     infinite;
+}
+.hr-audio-indicator.is-active .hr-audio-dot:nth-child(2) {
+	animation: hr-audio-bounce 1s ease-in-out 0.2s   infinite;
+}
+.hr-audio-indicator.is-active .hr-audio-dot:nth-child(3) {
+	animation: hr-audio-bounce 1s ease-in-out 0.4s   infinite;
+}
+
+@keyframes hr-audio-bounce {
+	0%, 80%, 100% { opacity: 0.25; transform: scaleY( 1 );   }
+	40%           { opacity: 1;    transform: scaleY( 1.6 ); }
+}
+
+/* Auto-advance toggle */
+.hr-audio-auto-label {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #374151;
+	cursor: pointer;
+	user-select: none;
+}
+
+.hr-audio-auto-label input[type="checkbox"] {
+	accent-color: #1a3fcc;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+
+/* Speed selector */
+.hr-audio-speed {
+	font-size: 12px;
+	padding: 3px 6px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	background: #fff;
+	color: #374151;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.hr-audio-speed:focus {
+	outline: 2px solid #1a3fcc;
+	outline-offset: 1px;
+}
+
+/* Playing state */
+.hr-audio-bar.is-playing {
+	border-color: #1a3fcc;
+	background: #eef1ff;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media ( max-width: 480px ) {
+	.holy-rosary-app {
+		padding: 0.75rem;
+	}
+
+	.hr-date-banner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hr-btn {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+
+	.hr-mystery-tabs {
+		gap: 4px;
+	}
+
+	.hr-tab {
+		padding: 4px 10px;
+		font-size: 12px;
+	}
+}
